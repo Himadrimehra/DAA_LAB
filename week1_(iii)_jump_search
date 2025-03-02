@@ -9,7 +9,7 @@ void jumpsearch(int arr[],int n,int key)
     int i=0;
     int m=sqrt(n);
     while(arr[min(m,n)-1]<key)
-    {
+{
         i=m;
         m=m+sqrt(n);
         if(i>=n)
