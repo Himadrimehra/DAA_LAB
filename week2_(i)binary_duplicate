@@ -54,7 +54,7 @@ int main()
     int arr[13]={1,2,3,4,5,5,5,5,6,6,6,7,8};
     int n=13;
     int key;
-    cout<<"enter the key between 1to 8";
+    cout<<"enter the key";
     cin>>key;
     int count;
    count= binaryduplicte(arr,n,key);
