@@ -2,7 +2,7 @@
 using namespace std;
 int binaryduplicte(int arr[],int n,int key)
 {
-    int first;
+    int first=-1;
    int start=0;
    int end=n-1;
     while(start<=end)
@@ -22,7 +22,11 @@ int binaryduplicte(int arr[],int n,int key)
         end=mid-1;
       }
     }
-    int last;
+    if (first==-1)
+      {
+        return -1;
+      }
+    int last=-1;
     start=0;
     end=n-1;
     while(start<=end)
@@ -37,7 +41,7 @@ int binaryduplicte(int arr[],int n,int key)
       {
         start=mid+1;
       }
-      else 
+      else
       {
         end=mid-1;
       }
@@ -54,5 +58,12 @@ int main()
     cin>>key;
     int count;
    count= binaryduplicte(arr,n,key);
-   cout<<"no. of duplicates are"<<count;
+   if(count==-1)
+   {
+    cout<<"key not present";
+   }
+   else 
+   {
+    cout<<"key is present and its occurance is "<<count;
+   }
 }
